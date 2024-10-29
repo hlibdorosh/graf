@@ -1,0 +1,63 @@
+/* Apply Google Fonts */
+body, h1, h2, p {
+    font-family: 'Roboto', sans-serif;
+}
+h1 {
+    font-family: 'Pacifico', cursive;
+}
+
+/* Background Gradient */
+body {
+    background: linear-gradient(135deg, #3b0d63, #1e0235);
+    color: #f1e4ff;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Main Container Styling */
+.container {
+    max-width: 800px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Heading Styles */
+h1 {
+    color: #f7c6ff;
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+}
+h2 {
+    color: #f1e4ff;
+    font-size: 1.25rem;
+    margin-top: 0.5rem;
+}
+
+/* Amplitude Control Styling */
+amplitude-control {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+input[type="range"], input[type="text"] {
+    width: 150px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #f1e4ff;
+}
+
+input[type="checkbox"]

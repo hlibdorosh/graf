@@ -3,43 +3,38 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dynamic Graph Display</title>
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <!-- Chart.js and Plugins -->
+  <title>Dynamic Measurement Chart</title>
+
+  <!-- Link to Chart.js for chart rendering -->
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-zoom"></script>
-  <!-- Existing CSS -->
+
+  <!-- Link to external CSS file -->
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
+<!-- Container for the Controls and Chart -->
 <div class="container">
-  <h1 class="text-center">Real-time Sine and Cosine Graph</h1>
+  <h1>Dynamic Measurement Chart</h1>
 
-  <!-- Amplitude Adjustment Section -->
-  <div class="control-panel">
-    <label>
-      <input type="checkbox" id="toggleInputType" /> Use Text Input for Amplitude
-    </label>
-    <amplitude-slider id="amplitudeControl" min="0.5" max="2" step="0.1"></amplitude-slider>
+  <!-- Custom Amplitude Control Component -->
+  <!-- This component allows adjusting the amplitude via slider or text input -->
+  <amplitude-control min="0.5" max="3" step="0.1"></amplitude-control>
+
+  <!-- Chart Display Area -->
+  <div class="chart-container">
+    <canvas id="measurementChart"></canvas>
   </div>
 
-  <!-- Graph Container -->
-  <canvas id="dynamicGraph" width="400" height="200"></canvas>
-
-  <!-- Visibility Checkboxes -->
-  <div class="visibility-controls">
-    <label><input type="checkbox" id="showSine" checked /> Show Sine</label>
-    <label><input type="checkbox" id="showCosine" checked /> Show Cosine</label>
+  <!-- Measurement Controls -->
+  <div class="controls">
+    <button id="endButton">End Measurement</button>
+    <label><input type="checkbox" id="showSine" checked> Show Sine</label>
+    <label><input type="checkbox" id="showCosine" checked> Show Cosine</label>
   </div>
-
-  <!-- End Measurement Button -->
-  <button id="endButton" class="btn">End Measurement</button>
 </div>
 
-<!-- Custom Components and JavaScript -->
+<!-- Link to external JavaScript file -->
 <script src="amplitudeSlider.js"></script>
-<script src="script.js"></script>
 </body>
 </html>
