@@ -121,3 +121,90 @@ thead {
     max-width: 250px;
     max-height: 250px;
 }
+/* General Styles */
+body, h1, h2, p, .navbar-brand {
+    font-family: 'Roboto', sans-serif;
+}
+h1 {
+    font-family: 'Pacifico', cursive;
+}
+
+/* Background Gradient */
+body {
+    background: linear-gradient(135deg, #3b0d63, #1e0235);
+    color: #f1e4ff;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    background: linear-gradient(135deg, #4b0d63, #2e0235);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+.navbar-brand {
+    font-size: 1.5rem;
+    color: #f7c6ff;
+    text-decoration: none;
+}
+.nav-buttons .btn {
+    margin-left: 10px;
+    padding: 10px 15px;
+    font-weight: bold;
+    background: linear-gradient(135deg, #4a00e0, #8e2de2);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    text-decoration: none;
+}
+.nav-buttons .btn:hover {
+    background-color: #8e2de2;
+    color: #fff;
+}
+
+/* Heading Styles */
+h1 {
+    color: #f7c6ff;
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    text-align: center;
+}
+h2 {
+    color: #f1e4ff;
+    font-size: 1.25rem;
+    margin-top: 0.5rem;
+}
+
+/* Amplitude Control Styling */
+amplitude-control {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+input[type="range"], input[type="text"] {
+    width: 150px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #f1e4ff;
+}
+
+
+/* Checkbox Label Styling */
+label {
+    color: #d1b3ff;
+    font-size: 1rem;
+    margin: 0 10px;
+}

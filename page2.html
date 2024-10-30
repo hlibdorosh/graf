@@ -7,19 +7,36 @@
 
   <!-- Link to Chart.js for chart rendering -->
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Pacifico&display=swap" rel="stylesheet">
+  <!-- Bootstrap CSS -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles.css">
 
   <!-- Link to external CSS file -->
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
+<nav class="navbar navbar-expand-lg navbar-dark">
+  <a class="navbar-brand" href="#">Statistics Viewer</a>
+  <div class="ml-auto">
+    <a href="index.html" class="btn btn-outline-light mx-1">Page 1</a>
+    <a href="page2.html" class="btn btn-outline-light mx-1">Page 2</a>
+  </div>
+</nav>
 <!-- Container for the Controls and Chart -->
 <div class="container">
   <h1>Dynamic Measurement Chart</h1>
 
-  <!-- Custom Amplitude Control Component -->
-  <!-- This component allows adjusting the amplitude via slider or text input -->
-  <amplitude-control min="0.5" max="3" step="0.1"></amplitude-control>
+    <!-- Amplitude Slider -->
+    <div class="slider-container">
+        <label for="amplitudeSlider">Amplitude:</label>
+        <input type="range" id="amplitudeSlider" min="1" max="10" value="5">
+        <span id="amplitudeValue">5</span>
+    </div>
+
 
   <!-- Chart Display Area -->
   <div class="chart-container">
