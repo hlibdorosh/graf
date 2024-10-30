@@ -1,7 +1,7 @@
 // Global Variables
 const ctx = document.getElementById('measurementChart').getContext('2d');
 const chartData = { sine: [], cosine: [] };
-let amplitude = 1;
+let amplitude = 5; // Set default amplitude to the initial slider value
 let isMeasuring = true;
 
 // Initialize Chart
@@ -41,13 +41,20 @@ const measurementChart = new Chart(ctx, {
     }
 });
 
-// Function to Update Amplitude Value
+// Function to Update Amplitude from Slider
 function updateAmplitude(value) {
     amplitude = parseFloat(value);
+    document.getElementById('amplitudeValue').textContent = amplitude;
     console.log("Amplitude updated to:", amplitude);
 }
 
-// Establish a Server-Sent Events (SSE) Connection
+// Set up the amplitude slider and update the amplitude on slider change
+const amplitudeSlider = document.getElementById('amplitudeSlider');
+amplitudeSlider.addEventListener('input', (event) => {
+    updateAmplitude(event.target.value);
+});
+
+// Establish a Server-Sent Events (SSE) Connection to fetch data
 const eventSource = new EventSource('https://old.iolab.sk/evaluation/sse/sse.php');
 
 eventSource.onmessage = function(event) {
@@ -60,7 +67,7 @@ eventSource.onmessage = function(event) {
         // Parse the data as JSON based on observed structure
         const data = JSON.parse(event.data);
 
-        // Verify the parsed data structure and retrieve values
+        // Retrieve values from the data structure
         const time = parseInt(data.x, 10);  // Use `x` as the time
         const sineValue = amplitude * parseFloat(data.y1); // `y1` as sine value
         const cosineValue = amplitude * parseFloat(data.y2); // `y2` as cosine value
